@@ -1,0 +1,2 @@
+# studia
+pierwszy projekt c#
