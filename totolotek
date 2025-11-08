@@ -1,0 +1,29 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Random los = new Random();
+        
+        int wylosowana = los.Next(1,11);
+        Console.WriteLine(wylosowana);
+        
+        Console.WriteLine("Wprowadz liczbe od 1 do 10: ");
+        int liczba = int.Parse(Console.ReadLine());
+        
+        if (wylosowana < liczba)
+        {
+            Console.WriteLine("Podales wieksza liczbe");
+        }
+        else if (wylosowana == liczba)
+        {
+            Console.WriteLine("Gratulacje, wygrales!!!");
+        }
+        else
+        {
+            Console.WriteLine("Podales mniejsza liczbe");
+        }
+        
+    }
+}
