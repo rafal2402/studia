@@ -1,7 +1,7 @@
 using System;
 public class HelloWorld
 {
-    public static void Main(string[] args)
+     public static void Main(string[] args)
     {
      Console.WriteLine("Jak masz na imie?");
      string imie = Console.ReadLine();
@@ -10,7 +10,6 @@ public class HelloWorld
      int rok = int.Parse(Console.ReadLine());
      int wiek = 2025 - rok;
      Console.WriteLine("Twoj wiek to " + wiek);
-    
     
     }
 }
