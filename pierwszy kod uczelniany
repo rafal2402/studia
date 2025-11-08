@@ -11,7 +11,7 @@ public class HelloWorld
         int wiek = 2025 - rok;
         Console.WriteLine("Twoj wiek to " + wiek);
      
-        if (wiek >= 18)
+    if (wiek >= 18)
     {
         Console.WriteLine("Pelnoletni");
     }
