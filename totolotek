@@ -7,7 +7,6 @@ public class HelloWorld
         Random los = new Random();
         
         int wylosowana = los.Next(1,11);
-        Console.WriteLine(wylosowana);
         
         Console.WriteLine("Wprowadz liczbe od 1 do 10: ");
         int liczba = int.Parse(Console.ReadLine());
