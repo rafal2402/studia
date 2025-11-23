@@ -1,0 +1,26 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        string[] nazwa = {"zabawki", "warzywa", "owoce", "ubrania"};
+        int[] ilosc = {10, 25, 85, 102};
+        int[] cena = {50, 2, 3, 100};
+        int portfel = 0;
+        
+        while(true)
+        {
+            Console.WriteLine("Witaj! Wybierz co chcesz zrobic.");
+            Console.WriteLine("1. Kup produkt");
+            Console.WriteLine("2. Dodaj artykul do magazynu");
+            Console.WriteLine("3. Wyswietl portfel");
+            Console.WriteLine("4. Wyjscie");
+            string wybor = Console.ReadLine();
+            
+            if(wybor == 1)
+            ConsoleWriteLine()
+        
+        }
+    }
+}
