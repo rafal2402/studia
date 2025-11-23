@@ -1,0 +1,13 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        int[] iloscKlientow = {2, 5, 13, 25, 108, 101, 99, 204, 56, 45, 12, 33};
+        int suma = 0;
+        for (int i = 0; i < 12; i++)
+        suma = suma + iloscKlientow[i];
+        Console.WriteLine(suma);
+    }
+}
