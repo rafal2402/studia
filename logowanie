@@ -1,0 +1,35 @@
+using System;
+using System.Linq;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Wprowadz login: ");
+        string login = Console.ReadLine();
+
+        
+        if(login.Length <= 4)
+        {
+            Console.WriteLine("Login jest za krotki!");
+        }
+        
+        Console.WriteLine("Wprowadz haslo: ");
+        string haslo = Console.ReadLine();
+        
+        
+        if(haslo.Length <= 8)
+        {
+            Console.WriteLine("Haslo jest za krotkie!");
+        }
+        
+        if(haslo.Any(char.IsDigit))
+        {
+            Console.WriteLine("Zalogowano pomyslnie!");
+        }
+        else
+        {
+            Console.WriteLine("Haslo musi zawierac cyfre!");
+        }
+    }
+}
