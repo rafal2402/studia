@@ -36,12 +36,11 @@ public class HelloWorld
             listaLiczb.Add(liczba);
         }
         
+        Console.WriteLine($"Elementy listy: ");
         foreach (var elementy in listaLiczb)
         {
-            Console.WriteLine($"Element listy: {elementy}");
-        }
-
-        
+            Console.WriteLine(elementy);
+        } 
     }
 }
 
@@ -99,6 +98,7 @@ public class HelloWorld
     }
 }
 
+
 ZADANIE 5
 
 using System;
@@ -111,18 +111,51 @@ public class HelloWorld
         List<int> listaLiczb = new List<int> {1, 100, 44, -100, 99, 45, 12, -46, 0};
         Console.WriteLine("Wprowadz liczbe");
         int input = int.Parse(Console.ReadLine());
+        Console.WriteLine("Elementy listy, ktore sa wieksze od wprowadzonej liczby: ");
+        int suma = 0;
         
-        Console.WriteLine($"Elementy tablicy, ktore sa wieksze od wprowadzonej liczby:");
         foreach (int liczba in listaLiczb)
         {
             if(liczba > input)
             {
-
                 Console.WriteLine(liczba);
+                suma++;
             }
+        }
+        Console.WriteLine($"Ilosc liczb, ktore sa wieksze od podanej liczby: {suma}");
+    }
+}
+
+
+ZADANIE 6
+
+using System;
+using System.Collections.Generic;
+
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        List<int> listaLiczb = new List<int> {-42, 100, 1298, -14325, 3, 593, 12, -467, 0, -1200000};
+       // int index = listaLiczb[i]
+        
+        for(int i = 0; i < listaLiczb.Count; i++)
+        {
+            if(listaLiczb[i] < 0)
+            {
+                listaLiczb.RemoveAt(i);
+                i--;
+            }
+        }
+        Console.WriteLine("Lista bez liczb ujemnych: ");
+        foreach(var liczba in listaLiczb)
+        {
+            Console.WriteLine(liczba);
         }
     }
 }
+
 
 ZADANIE 7
 
@@ -144,6 +177,7 @@ public class HelloWorld
     }
 }
 
+
 ZADANIE 8
 
 using System;
@@ -155,6 +189,7 @@ public class HelloWorld
     public static void Main(string[] args)
     {
         List<int> listaLiczb = new List<int> {100, 129, -143, 3, 59, 12, 52, 0, -120, 89, 100 -10, 17, 21, 96};
+        Console.WriteLine("Podaj liczbe, zeby sprawdzic czy znajduje sie na liscie.");
         int input = int.Parse(Console.ReadLine());
         
         if(listaLiczb.Contains(input))
@@ -168,6 +203,7 @@ public class HelloWorld
         }
     }
 }
+
 
 ZADANIE 9
 
