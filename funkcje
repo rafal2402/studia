@@ -1,0 +1,69 @@
+ZADANIE 1
+
+using System;
+using System.Collections.Generic;
+
+public class HelloWorld
+{
+    static bool Pelnoletnosc(int wiek)
+    {
+        return wiek >= 18;
+    }
+    
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Podaj wiek: ");
+        int wiek = int.Parse(Console.ReadLine());
+        
+        bool pelnoletni = Pelnoletnosc(wiek);
+        Console.WriteLine(pelnoletni);
+    }
+}
+
+
+ZADANIE 2
+
+using System;
+using System.Collections.Generic;
+
+public class HelloWorld
+{
+    static double Zamiana(double cel)
+    {
+        return cel * 1.8 + 32;
+    }
+    
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Podaj temperature w stopniach Celsjusza: ");
+        double input = double.Parse(Console.ReadLine());
+        double far = Zamiana(input);
+        Console.WriteLine($"{far}F");
+    }
+}
+
+ZADANIE 3
+
+using System;
+using System.Collections.Generic;
+
+public class HelloWorld
+{
+    static bool Podzielnosc(int a, int b)
+    {
+        if(b == 0)
+            return false;
+            
+        return a % b == 0;
+    }
+    
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Podaj pierwsza liczbe");
+        int pierwsza = int.Parse(Console.ReadLine());
+        Console.WriteLine("Podaj druga liczbe. Jesli pierwsza liczba dzieli sie przez druga wyswietli sie true.");
+        int druga = int.Parse(Console.ReadLine());
+        bool wynik = Podzielnosc(pierwsza, druga);
+        Console.WriteLine(wynik);
+    }
+}
