@@ -1,0 +1,174 @@
+ZADANIE 1
+
+using System;
+using System.Collections.Generic;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        List<int> listaLiczb = new List<int> {2, 1012, 111, 100, 214};
+        foreach (var liczba in listaLiczb)
+            {
+                Console.WriteLine(liczba);
+            }
+    }
+}
+
+
+ZADANIE 2
+
+using System;
+using System.Collections.Generic;
+
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        List<int> listaLiczb = new List<int>();
+        
+        
+        for(int i = 0; i < 5; i++)
+        {
+            Console.WriteLine("Podaj liczbe ktora chcesz dodac do listy");
+            int liczba = int.Parse(Console.ReadLine());
+            listaLiczb.Add(liczba);
+        }
+        
+        foreach (var elementy in listaLiczb)
+        {
+            Console.WriteLine($"Element listy: {elementy}");
+        }
+
+        
+    }
+}
+
+
+ZADANIE 3
+
+using System;
+using System.Collections.Generic;
+
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        List<int> listaLiczb = new List<int>();
+        
+        
+        for(int i = 0; i < 5; i++)
+        {
+            Console.WriteLine("Podaj liczbe ktora chcesz dodac do listy");
+            int liczba = int.Parse(Console.ReadLine());
+            listaLiczb.Add(liczba);
+        }
+        
+        int suma;
+        suma = listaLiczb[0] + listaLiczb[1] + listaLiczb[2] + listaLiczb[3] + listaLiczb[4];
+        Console.WriteLine($"Suma elementow tablicy to: {suma}");
+        
+    }
+}
+
+
+ZADANIE 4
+
+using System;
+using System.Collections.Generic;
+
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        List<int> listaLiczb = new List<int>();
+        
+        
+        for(int i = 0; i < 5; i++)
+        {
+            Console.WriteLine("Podaj liczbe ktora chcesz dodac do listy");
+            int liczba = int.Parse(Console.ReadLine());
+            listaLiczb.Add(liczba);
+        }
+        listaLiczb.Sort();
+        Console.WriteLine($"Najmniejszy element listy to {listaLiczb[0]}");
+        Console.WriteLine($"Najwiekszy element listy to {listaLiczb[^1]}");
+    }
+}
+
+ZADANIE 5
+
+using System;
+using System.Collections.Generic;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        List<int> listaLiczb = new List<int> {1, 100, 44, -100, 99, 45, 12, -46, 0};
+        Console.WriteLine("Wprowadz liczbe");
+        int input = int.Parse(Console.ReadLine());
+        
+        Console.WriteLine($"Elementy tablicy, ktore sa wieksze od wprowadzonej liczby:");
+        foreach (int liczba in listaLiczb)
+        {
+            if(liczba > input)
+            {
+
+                Console.WriteLine(liczba);
+            }
+        }
+    }
+}
+
+ZADANIE 7
+
+using System;
+using System.Collections.Generic;
+
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        List<int> listaLiczb = new List<int> {100, 1298, -14325, 3, 593, 12, -467, 0, -1200000};
+        listaLiczb.Sort();
+        
+        foreach(var liczba in listaLiczb)
+        {
+            Console.WriteLine(liczba);
+        }
+    }
+}
+
+ZADANIE 8
+
+using System;
+using System.Collections.Generic;
+
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        List<int> listaLiczb = new List<int> {100, 129, -143, 3, 59, 12, 52, 0, -120, 89, 100 -10, 17, 21, 96};
+        int input = int.Parse(Console.ReadLine());
+        
+        if(listaLiczb.Contains(input))
+        {
+            int index = listaLiczb.IndexOf(input);
+            Console.WriteLine($"Podana liczba znajduje sie na liscie. Jej indeks to {index}");
+        }
+        else
+        {
+            Console.WriteLine("Liczby nie ma na liscie.");
+        }
+    }
+}
+
+ZADANIE 9
+
+
