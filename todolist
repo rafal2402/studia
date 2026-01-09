@@ -1,0 +1,76 @@
+using System;
+using System.ComponentModel;
+using System.Collections.Generic;
+
+public class ToDoList
+{
+
+    public static void Main(string[] args)
+    {
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+        List<string> ListaZadan = new List<string>();
+        List<bool> Oznaczenia = new List<bool>();
+        while(true)
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Witaj w systemie zarzadzania lista zadan!");
+            Console.WriteLine("1. Wyswietl liste zadan");
+            Console.WriteLine("2. Dodaj zadanie");
+            Console.WriteLine("3. Usun zadanie");
+            Console.WriteLine("4. Oznacz zadanie jako wykonane");
+            Console.WriteLine("5. Zakoncz program");
+            Console.WriteLine("Wybierz opcje (1-5): ");
+            string wybor = Console.ReadLine();
+            Console.WriteLine("");
+        
+        
+       
+            if(wybor ==  "1")
+            {
+                if(ListaZadan.Count == 0)
+                {
+                    Console.WriteLine("Lista zadan jest pusta");
+                }
+                else
+                {
+                    Console.WriteLine("Lista zadan: ");
+                    for(int i = 0; i < ListaZadan.Count; i++)
+                    {
+                        Console.WriteLine((i + 1) + ". " + ListaZadan[i]);
+                    }
+                }
+            }
+            else if(wybor == "2")
+            {
+                Console.WriteLine("Podaj opis zadania: ");
+                string zadanie = Console.ReadLine();
+                ListaZadan.Add(zadanie);
+                Console.WriteLine("Zadanie dodano pomyslnie!");
+            }
+            else if(wybor == "3")
+            {
+                Console.WriteLine("Podaj numer zadania do usuniecia:");
+                int inputUsuwania = int.Parse(Console.ReadLine());
+                for(i = 0; i < ListaZadan.Count; i++)
+                 
+    
+            }
+            else if(wybor == "4")
+            {
+                Console.WriteLine("Podaj numer zadania do oznaczenia jako wykonane: ");
+                Console.ReadLine();
+            }
+            else if(wybor == "5")
+            {
+                Console.WriteLine("Do zobaczenia!");
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Nieprawidlowa opcja. Prosze wybrac ponownie.");
+            }
+        }
+
+        
+    }
+}
