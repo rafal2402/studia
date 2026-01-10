@@ -1,0 +1,124 @@
+LISTA ZAKUPOW
+
+using System;
+using System.Collections.Generic;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        List <string> lista = new List <string>();
+        bool dziala = true;
+        
+        while(dziala)
+        {
+            Console.WriteLine("Wybierz co chcesz zrobic");
+            Console.WriteLine("");
+            Console.WriteLine("1. Dodaj produkt do listy");
+            Console.WriteLine("2. Wyswietl liste");
+            Console.WriteLine("3. Usun produkt z listy");
+            Console.WriteLine("4. Wyjdz z programu");
+            
+            int input = int.Parse(Console.ReadLine());
+            Console.WriteLine("");
+            if(input == 1)
+            {
+                Console.WriteLine("Podaj jaki produkt chcesz dodac do listy zakupow");
+                string dodawanie = Console.ReadLine();
+                lista.Add(dodawanie);
+            }
+            else if(input == 2)
+            {
+                Console.WriteLine("Produkty na twojej liscie:");
+                foreach(var produkt in lista)
+                {       
+                    Console.WriteLine(produkt);
+                }  
+                Console.WriteLine("");
+            }
+            else if(input == 3)
+            {
+                Console.WriteLine("Wybierz produkt ktory chcesz usunac z listy");
+                string usuwanie = Console.ReadLine();
+                if(lista.Remove(usuwanie))
+                {
+                    Console.WriteLine("Produkt zostal usuniety.");
+                }
+                else
+                {
+                    Console.WriteLine("Nie znaleziono produktu.");
+                    Console.WriteLine("");
+                }
+            }
+            else if(input == 4)
+            {
+                dziala = false;
+            }        
+        }
+    }
+    
+}
+
+SLOWINK
+
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+using System.Collections.Generic;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Dictionary<string, string> slowka = new Dictionary<string, string>();
+        
+        slowka.Add("hello", "czesc");
+        slowka.Add("dog", "pies");
+        slowka.Add("cat", "kot");
+        
+        Console.Write("Podaj slowo po angielsku: ");
+        string slowo = Console.ReadLine();
+        
+        if(slowka.ContainsKey(slowo))
+        {
+            Console.WriteLine("Tlumaczenie: " + slowka[slowo]);
+        }
+        else
+        {
+            Console.WriteLine("Brak tlumaczenia w slowniku.");
+        }
+    }
+}
+
+LICZBY CALKOWITE
+
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+using System.Collections.Generic;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        List <int> lista = new List <int>();
+        for(int i = 0; i < 5; i++)
+        {
+            Console.WriteLine("Podaj liczbe calkowita: ");
+            int input = int.Parse(Console.ReadLine());
+            lista.Add(input);
+        }
+        
+        Console.WriteLine("Tylko parzyste liczby, ktore zostaly podane: ");
+        foreach(var liczby in lista)
+        {
+            if(liczby % 2 == 0)
+            {
+                Console.WriteLine(liczby);
+            }
+
+        }
+    }
+}
