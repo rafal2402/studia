@@ -1,25 +1,24 @@
 using System;
 public class HelloWorld
+
 {
     public static void Main(string[] args)
     {
         Console.WriteLine("Jak masz na imie?");
         string imie = Console.ReadLine();
         
-        Console.WriteLine("Witaj" + imie + "! " + "W ktorym roku sie urodziles/as?");
+        Console.WriteLine("Witaj " + imie + "! " + "W ktorym roku sie urodziles/as?");
         int rok = int.Parse(Console.ReadLine());
         int wiek = 2025 - rok;
         Console.WriteLine("Twoj wiek to " + wiek);
      
-    if (wiek >= 18)
-    {
-        Console.WriteLine("Pelnoletni");
-    }
-    else
-    {
-        Console.WriteLine("Niepelnoletni");  
-    }
-    
-    
+        if (wiek >= 18)
+        {
+            Console.WriteLine("Pelnoletni");
+        }
+        else
+        {
+            Console.WriteLine("Niepelnoletni");  
+        }
     }
 }
