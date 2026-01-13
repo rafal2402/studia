@@ -1,4 +1,4 @@
-ZADANIE 1
+ZADANIE 1 (pelnoletnosc.cs)
 
 using System;
 using System.Collections.Generic;
@@ -21,7 +21,7 @@ public class HelloWorld
 }
 
 
-ZADANIE 2
+ZADANIE 2 (celsjuszenafaranheit.cs)
 
 using System;
 using System.Collections.Generic;
