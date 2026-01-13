@@ -1,7 +1,8 @@
 using System;
-
 public class HelloWorld
 {
+
+    
     public static void Main(string[] args)
     {
         Console.WriteLine ("Podaj liczbe n.");
