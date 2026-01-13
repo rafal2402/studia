@@ -30,10 +30,6 @@ public class HelloWorld
                 }
                 Console.WriteLine($"{maksymalny_koszt}");
             }    
-        }
-        
-        
-        
-    }
-    
+        }   
+    }   
 }
