@@ -29,22 +29,29 @@ public class HelloWorld
                     int przeznaczenie = wydatki[wydatek];
                     Console.WriteLine($"Taki wydatek juz istnieje. Przeznaczono: {przeznaczenie}.");
                     Console.Write("Kwota jaka chcesz przeznaczyc na ten wydatek: ");
-                    int kwota = int.Parse(Console.ReadLine());
+                    int kwota;
+                    
+                    while(!int.TryParse(Console.ReadLine(), out kwota))
+                    {
+                        Console.Write("To nie jest liczba. Wpisz poprawna kwote: ");
+                    }
                     wydatki[wydatek] += kwota;
                     Console.WriteLine("");
                 }
                 else
                 {
                     Console.Write("Kwota jaka chcesz przeznaczyc na ten wydatek: ");
-                    int kwota = int.Parse(Console.ReadLine());
+                    int kwota;
+                    while(!int.TryParse(Console.ReadLine(), out kwota))
+                    {
+                        Console.Write("To nie jest liczba. Wpisz poprawna kwote: ");
+                    }
                     wydatki[wydatek] = kwota;
                     Console.WriteLine("");
                 }
             }
             else if(input == "2")
             {
-                
-                
                 if(wydatki.Count == 0)
                 {
                     Console.WriteLine("Brak dodanych wydatkow.");
@@ -58,8 +65,7 @@ public class HelloWorld
                         
                     }
                     Console.WriteLine("");
-                }
-                
+                }  
             }
             else if(input == "3")
             {   
@@ -73,9 +79,17 @@ public class HelloWorld
             }
             else if(input == "4")
             {
-                int maksWydatek = wydatki.Values.Max();
-                Console.WriteLine($"Najwieksza wartosc wydatku: {maksWydatek}."); 
-                Console.WriteLine("");
+                if(wydatki.Count == 0)
+                {
+                    Console.WriteLine("Brak wydatkow.");
+                    Console.WriteLine("");
+                }
+                else
+                {
+                    int maksWydatek = wydatki.Values.Max();
+                    Console.WriteLine($"Najwieksza wartosc wydatku: {maksWydatek}."); 
+                    Console.WriteLine("");
+                }
             }
             else if(input == "5")
             {
