@@ -10,8 +10,6 @@ public class HelloWorld
         
         while(true)
         {
-            
-            
             Console.WriteLine("KALKULATOR WYDATKOW DOMOWYCH");
             Console.WriteLine("1. Dodaj wydatek.");
             Console.WriteLine("2. Wyswietl liste wydatkow.");
