@@ -1,0 +1,15 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Wprowadz dlugosci bokow prostokata do obliczenia pola.");
+        Console.WriteLine("Dlugosc pierwszego boku:");
+        int pierwszy = int.Parse(Console.ReadLine());
+        Console.WriteLine("Dlugosc drugiego boku");
+        int drugi = int.Parse(Console.ReadLine());
+        int pole = pierwszy * drugi;
+        Console.WriteLine($"Pole prostokata o bokach {pierwszy} i {drugi} to {pole}");
+    }
+}
