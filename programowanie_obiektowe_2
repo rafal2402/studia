@@ -1,3 +1,5 @@
+ZADANIE 2
+
 public class HelloWorld
 {
     public static void Main(string[] args)
@@ -12,5 +14,41 @@ public class HelloWorld
             }
             Console.WriteLine(suma);
         
+    }
+}
+
+ZADANIE 3
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Sprawdz czy wpisana liczba jest doskonala.");
+        if(int.TryParse(Console.ReadLine(), out int input) && input > 0)
+        {
+            int suma = 0;
+            for(int i = 1; i < input; i++)
+            {
+                if(input % i == 0)
+                {
+                    suma += i;
+                }
+            }
+            if(suma == input)
+            {
+                Console.WriteLine($"Liczba {input} jest liczba doskonala.");
+            }
+            else
+            {
+                Console.WriteLine($"Liczba {input} nie jest liczba doskonala");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Wprowadzono nieprawidlowa liczbe.");
+        }
+
     }
 }
