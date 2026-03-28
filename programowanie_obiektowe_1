@@ -10,6 +10,7 @@ public class HelloWorld
         Console.WriteLine("Dlugosc drugiego boku");
         int drugi = int.Parse(Console.ReadLine());
         int pole = pierwszy * drugi;
-        Console.WriteLine($"Pole prostokata o bokach {pierwszy} i {drugi} to {pole}");
+        int obwod = 2 * pierwszy + 2 * drugi;
+        Console.WriteLine($"Pole prostokata o bokach {pierwszy} i {drugi} to {pole}, a obwod to {obwod}");
     }
 }
