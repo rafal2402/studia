@@ -72,3 +72,29 @@ public class HelloWorld
 
     }
 }
+
+
+ZADANIE 4
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine ("Podaj liczbe zmiennoprzecinkowa - dla tej wartosci zostana obliczone wartosci trygonometryczne.");
+        double input;
+        while (!double.TryParse(Console.ReadLine(), out input))
+        {
+            Console.WriteLine("Podales zła liczbe. Sprobuj ponownie:");
+        }
+        double sinus = Math.Sin(input);
+        double cosinus = Math.Cos(input);
+        double tangens = Math.Tan(input);
+        double cotangens = 1/tangens;
+        Console.WriteLine($"Wartosc sinus: {sinus}");
+        Console.WriteLine($"Wartosc cosinus: {cosinus}");
+        Console.WriteLine($"Wartosc tangnes: {tangens}");
+        Console.WriteLine($"Wartosc cotangens: {cotangens}");
+    }
+}
