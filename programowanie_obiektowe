@@ -33,7 +33,6 @@ public class HelloWorld
                 suma += i;
             }
             Console.WriteLine(suma);
-        
     }
 }
 
