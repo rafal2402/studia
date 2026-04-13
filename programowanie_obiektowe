@@ -98,3 +98,66 @@ public class HelloWorld
         Console.WriteLine($"Wartosc cotangens: {cotangens}");
     }
 }
+
+
+METODY
+
+ZADANIE 1
+
+using System;
+
+public class HelloWorld
+{
+    public static void CzyJestProstokatny(double a, double b, double c)
+    {
+        if(a*a + b*b == c*c)
+        {
+            Console.WriteLine($"Trojkat o bokach {a}, {b}, {c} jest prostokatny.");
+        }
+        else
+        {
+           Console.WriteLine($"Trojkat o bokach {a}, {b}, {c} NIE jest prostokatny.");
+        }
+    }
+    
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Sprawdz czy trojkat jest prostokatny. Podaj dlugosci bokow.");
+        Console.WriteLine("Dlugosc 1 boku:");
+        double bok1 = double.Parse(Console.ReadLine());
+        Console.WriteLine("Dlugosc 2 boku:");
+        double bok2 = double.Parse(Console.ReadLine());
+        Console.WriteLine("Dlugosc 3 boku:");
+        double bok3 = double.Parse(Console.ReadLine());
+        
+        CzyJestProstokatny(bok1, bok2, bok3);
+    }
+}
+
+
+ZADANIE 2
+
+using System;
+
+public class HelloWorld
+{
+    public static void Wartosci(int a)
+    {
+           
+    }
+    
+    public static void Main(string[] args)
+    {
+        int[] tablica = new int[] {2, 3, 5, 8, 14, 1, 20, 17, 7};
+        Console.WriteLine("Podaj liczbe. Zostana wyswietlone wartosci poczatkowe, ktorych suma nie przekracza progu podanej liczby.");
+        int liczba = int.Parse(Console.ReadLine());
+        int suma = 0;
+        
+        for(int i = 0; i < tablica.Length; i++)
+        {
+            if(suma < liczba)
+            {
+                suma += tablica[i];
+            }
+    }
+}
