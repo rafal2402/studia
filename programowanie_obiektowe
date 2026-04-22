@@ -182,3 +182,36 @@ public class HelloWorld
         Console.WriteLine(string.Join(", ", poczatkowe));
     }
 }
+
+
+ZADANIE 3
+
+using System;
+using System.Linq;
+
+public class HelloWorld
+{
+    public static string CzyTabliceSaTakieSame(int[] tab1, int[] tab2)
+    {
+        if(tab1.SequenceEqual(tab2))
+        {
+            return "Tablice sa takie same.";
+        }
+        else
+        {
+            return "Tablice nie sa takie same.";
+        }
+    }
+    public static void Main(string[] args)
+    {
+        int[] tablica = {1, 2, 3};
+        int[] tablica2 = {1, 2, 3};
+        string sprawdzenie = HelloWorld.CzyTabliceSaTakieSame(tablica, tablica2);
+        Console.WriteLine(sprawdzenie);
+    }
+}
+
+
+ZADANIE 4
+
+
