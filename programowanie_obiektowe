@@ -6,11 +6,23 @@ public class HelloWorld
 {
     public static void Main(string[] args)
     {
+        int pierwszy;
+        int drugi;
+        
         Console.WriteLine("Wprowadz dlugosci bokow prostokata do obliczenia pola.");
+        
         Console.WriteLine("Dlugosc pierwszego boku:");
-        int pierwszy = int.Parse(Console.ReadLine());
+        while (!int.TryParse(Console.ReadLine(), out pierwszy))
+        {
+            Console.WriteLine("Blad! Podaj liczbe calkowita.");
+        }
+
         Console.WriteLine("Dlugosc drugiego boku");
-        int drugi = int.Parse(Console.ReadLine());
+        while (!int.TryParse(Console.ReadLine(), out drugi))
+        {
+            Console.WriteLine("Blad! Podaj liczbe calkowita.");
+        }
+        
         int pole = pierwszy * drugi;
         int obwod = 2 * pierwszy + 2 * drugi;
         Console.WriteLine($"Pole prostokata o bokach {pierwszy} i {drugi} to {pole}, a obwod to {obwod}");
