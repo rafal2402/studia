@@ -65,7 +65,8 @@ public class HelloWorld
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("Sprawdz czy wpisana liczba jest doskonala.");
+        Console.WriteLine("Liczba doskonala to taka liczba naturalna, ktora jest rowna sumie wszystkich swoich dzielnikow wlasciwych (mniejszych od niej samej).");
+        Console.WriteLine("Sprawdz czy wpisana liczba jest doskonala: ");
         if(int.TryParse(Console.ReadLine(), out int input) && input > 0)
         {
             int suma = 0;
