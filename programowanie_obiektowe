@@ -143,13 +143,28 @@ public class HelloWorld
     
     public static void Main(string[] args)
     {
+        double bok1;
+        double bok2;
+        double bok3;
+        
         Console.WriteLine("Sprawdz czy trojkat jest prostokatny. Podaj dlugosci bokow.");
         Console.WriteLine("Dlugosc 1 boku:");
-        double bok1 = double.Parse(Console.ReadLine());
+        while (!double.TryParse(Console.ReadLine(), out bok1))
+        {
+            Console.WriteLine("Podaj liczbe calkowita lub zmiennoprzecinkowa!");
+        }
+        
         Console.WriteLine("Dlugosc 2 boku:");
-        double bok2 = double.Parse(Console.ReadLine());
+        while (!double.TryParse(Console.ReadLine(), out bok2))
+        {
+            Console.WriteLine("Podaj liczbe calkowita lub zmiennoprzecinkowa!");
+        }
+        
         Console.WriteLine("Dlugosc 3 boku:");
-        double bok3 = double.Parse(Console.ReadLine());
+        while (!double.TryParse(Console.ReadLine(), out bok3))
+        {
+            Console.WriteLine("Podaj liczbe calkowita lub zmiennoprzecinkowa!");
+        }
         
         CzyJestProstokatny(bok1, bok2, bok3);
     }
