@@ -1,5 +1,3 @@
-// ZADANIE 1
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,7 +47,6 @@ class Super_student : Student
     public Super_student(string imie, string kierunek, int stypendium) : base(imie, kierunek)
     {
         this.stypendium = stypendium;
-        Console.WriteLine("Zainteresowania naukowe: ");
         zainteresowania = new List<string>();
     }
     
@@ -79,11 +76,12 @@ class Program
         
         Super_student st2 = new Super_student("Paulina", "Chemia", 200);
         st2.Wiek = 24;
-        List<string> zaintersowania = new List<string>();
+        Console.WriteLine(st2.ToString());
+        List<string> zainteresowania = new List<string>();
         st2.dodajZainteresowania("Zabawa z kotami");
         st2.dodajZainteresowania("Kodowanie");
         st2.dodajZainteresowania("Granie w farmę");
-        zainteresowania = st2.pobierzZaintersowania();
+        zainteresowania = st2.pobierzZainteresowania();
         foreach(var i in zainteresowania)
             Console.WriteLine(i);
         
